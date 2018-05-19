@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 26
@@ -29,5 +30,11 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:26.1.0'
     implementation files('libs/GraphView-4.2.1.jar')
     implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    compile 'net.sourceforge.jtds:jtds:1.2.7'
 
+    implementation 'com.android.support:gridlayout-v7:26.1.0'
+}
+repositories {
+    mavenCentral()
 }

@@ -7,6 +7,7 @@ import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 
 import java.util.ArrayList;
 
@@ -17,43 +18,30 @@ public class Trend extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trend);
         BarChart chart;
-        try{
-            chart = findViewById(R.id.gpTrend);
-            chart = findViewById(R.id.gpTrend);
+        chart = findViewById(R.id.chart);
+        chart = findViewById(R.id.chart);
 
-            ArrayList<BarEntry> entries = new ArrayList<>();
-            entries.add(new BarEntry(44f , 0));
-            entries.add(new BarEntry(60f , 1));
-            entries.add(new BarEntry(79f , 2));
-            entries.add(new BarEntry(20f , 3));
-            entries.add(new BarEntry(50f ,4));
-            BarDataSet dataSet = new BarDataSet(entries,"days");
+        ArrayList<BarEntry> entries = new ArrayList<>();
+        entries.add(new BarEntry(44 , 0));
+        entries.add(new BarEntry(60 , 1));
+        entries.add(new BarEntry(7 , 2));
+        entries.add(new BarEntry(20 , 3));
+        entries.add(new BarEntry(50 ,4));
+        BarDataSet dataSet = new BarDataSet(entries,"days");
 
-            ArrayList<String> theDates = new ArrayList<>();
-            theDates.add("Monday");
-            theDates.add("Tuesday");
-            theDates.add("Wednesday");
-            theDates.add("Thursday");
-            theDates.add("Friday");
+        ArrayList<String> theDates = new ArrayList<String>();
+        theDates.add("Monday");
+        theDates.add("Tuesday");
+        theDates.add("Wednesday");
+        theDates.add("Thursday");
+        theDates.add("Friday");
 
-            BarData data = new BarData(dataSet);
-            try
-            {
-                chart.setData(data);
-            }
-            catch (Exception e)
-            {
+        BarData data = new BarData(dataSet);
 
-            }
-        }catch (Exception e)
-        {
-
-        }
-
-
-
-
-
+        chart.setData(data);
+        String[] l = {"Monday","Tuesday","Wednesday","Thursday","Friday"};
+        IAxisValueFormatter label = new Labeling(l);
+        chart.getAxisLeft().setValueFormatter(label);
 
 
     }

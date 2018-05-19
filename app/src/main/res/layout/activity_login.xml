@@ -82,4 +82,17 @@
         android:layout_height="62dp"
         android:focusedByDefault="true"
         android:text="TEST"/>
+
+    <TextView
+        android:id="@+id/tvBolean"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
 </LinearLayout>

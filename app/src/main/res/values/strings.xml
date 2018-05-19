@@ -17,4 +17,7 @@
     <string name="title_activity_trend">Trend</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="codecentrix_connection">jdbc:jtds:sqlserver://10.103.137.7:1433/Codecentrix</string>
+    <string name="password">password</string>
+    <string name="username">codecentrix</string>
 </resources>
